@@ -1,7 +1,7 @@
 import './Card.css'
-
-import { FaCircle } from "react-icons/fa";
+import { circled } from "react-icons/fa";
 import UserIcon from '../UserIcon/UserIcon';
+
 const Card = ({ ticket, user, icon, statusIcon, statusColor, bgColor }) => {
     const userIntials = user?.name.split(' ').map(word => word.charAt(0)).join('');
     return (
@@ -21,7 +21,7 @@ const Card = ({ ticket, user, icon, statusIcon, statusColor, bgColor }) => {
                     {icon}
                 </div>}
                 <div className="card_tag">
-                    <FaCircle />
+                    <circled />
                     {
                         ticket?.tag.map((tg, id) => (
                             <p key={id} >{tg}</p>

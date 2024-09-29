@@ -5,43 +5,42 @@ import { GiNetworkBars } from "react-icons/gi";
 import { TbCircleDotted } from "react-icons/tb";
 import { RxHalf2 } from "react-icons/rx";
 
-const bgColors = ["#B57136", "#868728", "#4D9446", "#5F80E4"];
-
 export const priorities = [
-    { title: "no priority", color: "gray", icon: <BsThreeDots /> },
     { title: "urgent", color: "orange", icon: <BsFillInfoSquareFill /> },
     { title: "high", color: "black", icon: <GiNetworkBars /> },
     { title: "medium", color: "gray", icon: <GiNetworkBars /> },
-    { title: "low", color: "lightgray", icon: <GiNetworkBars /> }
+    { title: "low", color: "lightgray", icon: <GiNetworkBars /> },
+    { title: "no priority", color: "gray", icon: <BsThreeDots /> }
 ];
+
 export const status = [
     { title: "backlog", color: "black", icon: <TbCircleDotted /> },
-    { title: "todo", color: "lightgrey", icon: < FaRegCircle /> },
-    { title: "in progress", color: "#EBCB62", icon: <RxHalf2 /> },
-    { title: "done", color: "#606ACB", icon: <FaCheckCircle /> },
+    { title: "todo", color: "grey", icon: < FaRegCircle /> },
+    { title: "in progress", color: "orange", icon: <RxHalf2 /> },
+    { title: "done", color: "purple", icon: <FaCheckCircle /> },
     { title: "cancelled", color: "gray", icon: <FaCircleXmark /> },
 ];
 
 export const statusIcons = {
     backlog: {
-        color: "black",
         icon: <TbCircleDotted />,
+        color: "black",
     },
     todo: {
-        color: "lightgrey",
         icon: <FaRegCircle />,
+        color: "lightgrey",
     },
     "in progress": {
-        color: "#EBCB62",
         icon: <RxHalf2 />,
+        color: "yellow",
     },
     done: {
-        color: "#606ACB",
         icon: <FaCheckCircle />,
+        color: "purple",
     },
     cancelled: {
-        color: "gray",
         icon: <FaCircleXmark />,
+        color: "gray",
     },
 };
 
@@ -49,7 +48,8 @@ export const generateIntials = (name) => {
     return name.split(' ').map(word => word.charAt(0)).join('');
 }
 
+const bgColors = ["orange", "blue", "green", "red"];
 export const getRandomColor = () => {
-    const randomIndex = Math.floor(Math.random() * bgColors.length);
-    return bgColors[randomIndex];
+    const randomInd = Math.floor(Math.random() * bgColors.length);
+    return bgColors[randomInd];
 };

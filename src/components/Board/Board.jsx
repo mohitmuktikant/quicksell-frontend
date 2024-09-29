@@ -1,8 +1,8 @@
 import './Board.css'
-import { IoMdAdd } from "react-icons/io";
-import { SlOptions } from "react-icons/sl";
 import Card from '../Card/Card';
 import UserIcon from '../UserIcon/UserIcon';
+import { IoMdAdd } from "react-icons/io";
+import { SlOptions } from "react-icons/sl";
 import { generateIntials, getRandomColor, priorities, statusIcons } from '../../utils/data';
 
 const Board = (props) => {
@@ -27,7 +27,9 @@ const Board = (props) => {
             <div className='board'>
                 <div className='board_top'>
                     <div className="board_top_name">
-                        <span><UserIcon intials={generateIntials(data?.name)} available={data?.available} bgColor={getRandomColor()} /></span>
+                        <span>
+                            <UserIcon intials={generateIntials(data?.name)} available={data?.available} bgColor={getRandomColor()} />
+                        </span>
                         <p>{data?.name} </p>
                         <span>{filteredTickets.length}</span>
                     </div>
@@ -87,6 +89,7 @@ const Board = (props) => {
             </div>
         )
     }
+    
     return (
         <div className='board'>
             <div className='board_top'>

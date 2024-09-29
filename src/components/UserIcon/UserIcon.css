@@ -2,21 +2,21 @@
   display: flex;
 }
 
-.user_icon {
+.usericon {
   height: 40px;
   width: 40px;
   background-color: blue;
   display: grid;
-  place-items: center;
   border-radius: 50%;
+  place-items: center;
   text-transform: uppercase;
   color: white;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .dot {
+  color: grey;
   position: relative;
   top: 25px;
   right: 15px;
-  color: grey;
 }

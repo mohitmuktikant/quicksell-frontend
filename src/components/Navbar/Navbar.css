@@ -6,7 +6,7 @@
   width: 100%;
 }
 
-.expand_btn {
+.expandbtn {
   display: flex;
   padding: 2px 4px;
   width: 110px;
@@ -20,7 +20,7 @@
   cursor: pointer;
 }
 
-.expand_btn svg {
+.expandbtn svg {
   height: 20px;
   width: 20px;
 }

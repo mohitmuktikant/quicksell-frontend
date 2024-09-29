@@ -1,7 +1,7 @@
+import { useState } from 'react';
 import './Navbar.css'
 import { MdOutlineTune } from "react-icons/md";
 import { FaAngleDown } from "react-icons/fa6";
-import { useState } from 'react';
 
 const groupOptions = [
     {
@@ -49,12 +49,12 @@ const Navbar = ({ group, order, onGroupchange, onOrderChange }) => {
     return (
         <div className='nav'>
             <div
-                className='expand_btn'
+                className='expandbtn'
                 onClick={() => { setExpandMore(prev => !prev) }}
             >
-                <MdOutlineTune />
-                <span>Display</span>
-                <FaAngleDown />
+            <MdOutlineTune />
+            <span>Display</span>
+            <FaAngleDown />
             </div>
             {expandMore && <div className="dropdown" >
                 <div className='display'>

@@ -1,65 +1,83 @@
-# Kanban Board App
+# Frontend Assignment
 
-## Overview
+# **Use React JS for the Assignment**
 
-This project is a Kanban board application built using ReactJS. It allows users to interact with ticket data fetched from the [Quicksell API](https://api.quicksell.co/v1/internal/frontend-assignment). Users can group and sort tickets based on different criteria, making it a versatile tool for project management. See the project live at [Live Link](https://quicksell-frontend-shubh.netlify.app/).
+**Design:** 
 
-## Features
+**Display state:** 
 
-- **Data Interaction:**
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e1a13657-9dc2-496d-a5c7-b27be15e9fe0/Untitled.png)
 
-  - Fetches ticket data from the Quicksell API.
-  - Displays the fetched data on a Kanban board.
+**State based on display. - Grouping by user is selected.**
 
-- **Grouping Options:**
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/de6f9ade-433a-4185-a6df-4d396ea8be2d/Untitled.png)
 
-  - Group tickets by Status, User, or Priority.
+**Grouping by priority is selected.**
 
-- **Sorting Options:**
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2f8e52ba-2b96-40e8-be6a-34e25dd240eb/Untitled.png)
 
-  - Sort tickets by Priority or Title.
+**Card:**
 
-- **Priority Levels:**
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/896834d4-fe3d-4db5-bd76-29049439b0cb/Untitled.png)
 
-  - Tickets are categorized with priority levels ranging from Urgent (4) to No Priority (0).
+**Api** :  https://api.quicksell.co/v1/internal/frontend-assignment 
 
-- **Styling:**
+You are required to create an interactive Kanban board application using React JS that interacts with the provided API from  https://api.quicksell.co/v1/internal/frontend-assignment
 
-  - Visually appealing and responsive design.
-  - Pure CSS is used for styling.
+When a user clicks the "display" button and selects a grouping option, the Kanban board should dynamically adjust to reflect the user's choice.
 
-- **Icons:**
+The application should offer three distinct ways to group the data:
 
-  - Icons are integrated for various elements of the application using react-icon.
+1. **By Status**: Group tickets based on their current status.
+2. **By User**: Arrange tickets according to the assigned user.
+3. **By Priority**: Group tickets based on their priority level.
 
-- **State Persistence:**
-  - Saves the user's view state (grouping and sorting options) even after a page reload using local storage.
+Users should also be able to sort the displayed tickets in two ways:
 
-## Setup
+1. **Priority**: Arrange tickets in descending order of priority.
+2. **Title**: Sort tickets in ascending order based on their title.
 
-1. **Clone the Repository:**
+The Kanban board should be responsive and visually appealing, with a design similar to the provided screenshots. 
 
-   ```bash
-   git clone https://github.com/Shubhankar-12/quicksell-frontend-assignment
-   ```
+**The priority levels for the tickets are as follows:**
 
-2. **Navigate to the Project Directory:**
+- Urgent (Priority level 4)
+- High (Priority level 3)
+- Medium (Priority level 2)
+- Low (Priority level 1)
+- No priority (Priority level 0)
 
-   ```bash
-   cd kanban-board-app
-   ```
+**Priority levels: (This values you will receive in the api)**
 
-3. **Install Dependencies:**
+4 - Urgent
 
-   ```bash
-   npm install
-   ```
+3 - High
 
-4. **Run the Application:**
+2 - Medium
 
-   ```bash
-   npm start
-   ```
+1 - Low
 
-5. **Access the Application:**
-   Open your browser and go to `http://localhost:3000`.
+0 - No priority
+
+Additionally, the application should save the user's view state even after page reload.
+
+**Assets**
+
+[Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/867c6222-5e73-49fb-b21f-a276ba2d258b/76bcb3fe-d025-4ad4-9247-e38c2935b859/Untitled.zip)
+
+**Note:** 
+
+1. Don’t use css library like Bootstrap, Tailwind, Vite, Material UI, Charka…etc
+2. Don’t use NextJs or similar framework. Code in pure ReactJS
+3. Write Pure CSS Code only. No library for css (bootstrap,..etc). Styled JSX can be used though
+
+## **Evaluation Criteria**
+
+Your work will be evaluated based on the following criteria:
+
+> UI Should Look exactly same as screenshot.
+> 
+1. **Functionality**: The application should effectively fetch data from the provided API and allow users to group and sort tickets based on the given options.
+2. **Visual Design**: The UI should match the provided design, including the layout, card design, and overall aesthetics.
+3. **Business Logic Optimisation**
+4. **Component Structuring**: Components should be appropriately structured, promoting reusability and maintainability.
